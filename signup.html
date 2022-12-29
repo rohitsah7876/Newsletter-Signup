@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Newsletter signup-page!</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: #889afd;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .box{
+            width:50%;  
+            height:max-content;
+            background-color: white;
+            padding: 24px;
+            text-align: center;
+
+            /* background-image: url("https://cdn.pixabay.com/photo/2016/10/18/21/22/beach-1751455__340.jpg"); */
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            box-shadow: 0 0 30px 18px rgba(0,0,0,0.5);
+        }
+
+        .box:hover{
+            box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+        }
+
+        input{
+            line-height: 0;
+            font-size: 1.5rem;
+            border: none;
+            outline: none;
+            padding: 0.5rem 2rem;
+            background-color: white;
+            width: 100%;
+            border-radius: .3rem;
+            border: 1px solid black;
+        }
+
+        button{
+            font-size: 1.8rem;
+            padding: 0.5rem 2rem;
+            background-color: #878686;
+            color: white;
+            border-radius: .5rem;
+            border:1px solid black;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover{
+            background-color: black;
+        }
+
+        ::placeholder{
+            font-weight: 200;
+            /* opacity: 0.6; */
+            font-size: 1rem;
+        }
+
+        @media (max-width:768px){
+            .box{
+            width: 90%; 
+            box-shadow: none;
+        }
+         .box:hover{
+            box-shadow: none;
+         }
+        }
+
+
+        @media (max-width:980px){
+            .box{
+            width: 90%; 
+        }
+        .heading{
+            font-size: 1.5rem;
+        }
+        
+        }
+
+        .header{
+            width: 100%;
+            margin: 1.8rem auto;
+            height: 5vh;
+        }
+
+        .heading{
+            font-size: 2rem;
+            text-transform: capitalize;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            animation: rotation 0.5s ease-in forwards;
+        }
+
+        @keyframes rotation {
+            0%{
+                font-size: 1rem;
+            }
+            100%{
+                font-size: 2rem;
+                color: #0c1661;
+            }
+        }
+	
+	.copywrite{
+	width:100%;
+	background-color:white;
+	padding:0.5rem 2rem;
+	font-size:1rem;
+  font-weight: bold;
+  margin-top: 12px;
+	}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">
+        <div class="header">
+            <h1 class="heading">Subscribe to my Newsletter</h1>
+        </div>
+        <form action="/" method="post" autocomplete="off">
+            <input type="text" placeholder="Enter Your First name" name="Fname" required/>
+            <input type="text" placeholder="Enter Your Last name" name="Lname" required/>
+            <input type="email" placeholder="Enter Your email" name="email" required/>
+            <button type="submit">submit</button>
+        </form>
+	<p class="copywrite">&copy; by RoSaw Coder</p>
+    </div>
+</div>
+</body>
+</html>
